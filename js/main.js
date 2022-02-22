@@ -1,8 +1,14 @@
 // рандомное число между или равно значениям.
 const RANDOM_NUMBER_BETWEEN = (min, max) => {
-  const MIN = (min < 0) ? min = 0 : min;
-  const MAX = (max < min) ? max = min : max;
-  return Math.round(Math.random() * (MAX - MIN)) + MIN;
+  if (min < 0) {
+    min = 0;
+  }
+
+  if (max < min) {
+    max = min;
+  }
+
+  return Math.round(Math.random() * (max - min)) + min;
 };
 
 RANDOM_NUMBER_BETWEEN(-2, 3);
