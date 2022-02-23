@@ -1,5 +1,5 @@
 // рандомное число между или равно значениям.
-const RANDOM_NUMBER_BETWEEN = (min, max) => {
+const randomNumberBetween = (min, max) => {
   if (min < 0) {
     min = 0;
   }
@@ -11,12 +11,12 @@ const RANDOM_NUMBER_BETWEEN = (min, max) => {
   return Math.round(Math.random() * (max - min)) + min;
 };
 
-RANDOM_NUMBER_BETWEEN(-2, 3);
+randomNumberBetween(-2, 3);
 
 // проверка длинны коментария, проверку проходит то TRUE
-const STRING_LENGHT = (string, maxLenghtString) => {
-  const COMPARISON = string.length <= maxLenghtString;
-  return COMPARISON;
+const stringLenght = (string, maxLenghtString) => {
+  const comparison = string.length <= maxLenghtString;
+  return comparison;
 };
 
-STRING_LENGHT('привет', 140);
+stringLenght('привет', 140);
